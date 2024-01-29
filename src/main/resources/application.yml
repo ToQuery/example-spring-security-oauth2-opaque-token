@@ -14,7 +14,7 @@ spring:
   profiles:
     active: local
   application:
-    name: example-spring-security-oauth2-sso-opaque-token
+    name: example-spring-security-oauth2-opaque-token
   security:
     oauth2:
       client:
@@ -28,9 +28,9 @@ spring:
               - read:user
           toquery:
             provider: toquery
-            client-name: example-spring-security-oauth2-sso-opaque-token
-            client-id: example-spring-security-oauth2-sso-opaque-token
-            client-secret: example-spring-security-oauth2-sso-opaque-token-secret
+            client-name: example-spring-security-oauth2-opaque-token
+            client-id: example-spring-security-oauth2-opaque-token
+            client-secret: example-spring-security-oauth2-opaque-token-secret
             client-authentication-method: client_secret_basic
             authorization-grant-type: authorization_code
             redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
@@ -59,4 +59,4 @@ spring:
 
 app:
   oauth2:
-    domain: http://127.0.0.1:9000
+    domain: http://example-spring-authorization-server.local:9000
