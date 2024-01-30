@@ -26,10 +26,10 @@ spring:
 #              - openid
               - user:email
               - read:user
-          toquery:
-            provider: toquery
-            client-name: example-spring-security-oauth2-opaque-token
+          example-spring-authorization-server:
+            provider: example-spring-authorization-server
             client-id: example-spring-security-oauth2-opaque-token
+            client-name: example-spring-security-oauth2-opaque-token
             client-secret: example-spring-security-oauth2-opaque-token-secret
             client-authentication-method: client_secret_basic
             authorization-grant-type: authorization_code
@@ -45,7 +45,7 @@ spring:
               - address
               - phone
         provider:
-          toquery:
+          example-spring-authorization-server:
             authorization-uri: ${app.oauth2.domain}/oauth2/authorize
             token-uri: ${app.oauth2.domain}/oauth2/token
             user-info-uri: ${app.oauth2.domain}/userinfo
